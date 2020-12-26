@@ -1,7 +1,13 @@
-const Dragon = require('./dragon.js')
-const fooey = new Dragon({
-    nickname: 'fooey'
-});
+const Generation = require('./generation.js');
 
-const fooey2 = new Dragon()
-console.log(fooey)
+const generation = new Generation();
+
+console.log(generation);
+
+const gooby = generation.newDragon();
+console.log(gooby);
+
+setTimeout(() => {
+    const mimar = generation.newDragon();
+    console.log(`mimar is ${mimar}`);
+}, 15000);
