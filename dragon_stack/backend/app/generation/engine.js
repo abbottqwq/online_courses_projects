@@ -1,4 +1,5 @@
 const Generation = require("./index.js");
+const GenerationTable = require('./table')
 
 class GenerationEngine {
 
@@ -19,6 +20,7 @@ class GenerationEngine {
 
     buildNewGeneration() {
         this._generation = new Generation();
+        GenerationTable.storeGeneration(this._generation);
         console.log('new generation: ', this._generation);
         this._timer = setTimeout(() => this.buildNewGeneration(), this._generation.expiration.getTime() - Date.now());
     }

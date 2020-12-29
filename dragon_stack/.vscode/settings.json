@@ -1,0 +1,19 @@
+{
+    "cSpell.enableFiletypes": [
+        "ignore",
+        "xml"
+    ],
+    "cSpell.language": "en,en-US",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "dragonstackdb",
+            "database": "dragonstackdb",
+            "username": "node_user",
+            "password": "node_password"
+        }
+    ]
+}
