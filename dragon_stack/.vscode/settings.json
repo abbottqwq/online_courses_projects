@@ -15,5 +15,6 @@
             "username": "node_user",
             "password": "node_password"
         }
-    ]
+    ],
+    "commentTranslate.targetLanguage": "en"
 }
