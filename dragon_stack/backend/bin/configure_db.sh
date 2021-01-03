@@ -21,10 +21,12 @@ if [ ${machine}=="MinGw" ] || [ ${machine}=="Cygwin" ];
 then
 psql.exe -U node_user dragonstackdb <./bin/sql/generation.sql
 psql.exe -U node_user dragonstackdb <./bin/sql/dragon.sql
+psql.exe -U node_user dragonstackdb <./bin/sql/trait.sql
 $SHELL
 elif [ ${machine}=="Mac" ] || [ ${machine}=="Linux" ]; then
 psql -U node_user dragonstackdb <./bin/sql/generation.sql
 psql -U node_user dragonstackdb <./bin/sql/dragon.sql
+psql -U node_user dragonstackdb <./bin/sql/trait.sql
 fi
 
 
