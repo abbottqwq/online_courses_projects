@@ -43,5 +43,6 @@ fi
 
 node ./bin/insertTraits.js
 
-$SHELL
+
 echo "dragonstackdb configure"
+$SHELL
