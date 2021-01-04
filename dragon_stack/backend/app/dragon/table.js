@@ -9,9 +9,9 @@ class DragonTable {
                 values ($1, $2, $3) returning id`,
 				[birthday, nickname, generationId],
 				(err, res) => {
-                    if (err) return reject(err);
-                    //TODO: 
-                    console.log(res);
+					if (err) return reject(err);
+					//TODO:
+					console.log(res);
 					const dragonId = res.rows[0].id;
 					resolve({ dragonId });
 				}
