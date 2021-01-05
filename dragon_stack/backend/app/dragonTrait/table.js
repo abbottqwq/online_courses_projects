@@ -1,6 +1,4 @@
 const pool = require("../../databasePool");
-
-const pool = require("../../databasePool.js");
 const TraitTable = require('../trait/table.js')
 
 class DragonTraitTable {

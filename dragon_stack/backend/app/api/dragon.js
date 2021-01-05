@@ -10,7 +10,6 @@ router.get("/new", (req, res, next) => {
 			console.log("dragonId", dragonId);
 			dragon.dragonId = dragonId;
 			res.json({ dragon });
-			res.json({ dragon });
 		})
 		.catch((err) => {
 			next(err);
