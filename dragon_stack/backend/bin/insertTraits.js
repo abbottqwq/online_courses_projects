@@ -6,7 +6,7 @@ TRAITS.forEach((trait) => {
 	const traitValues = trait.values;
 	traitValues.forEach((traitValue) => {
 		pool.query(
-			`insert into trait(traitType, traitValue) 
+			`insert into trait("traitType", "traitValue") 
             values ($1, $2) returning id`,
 			[traitType, traitValue],
 			(err, res) => {

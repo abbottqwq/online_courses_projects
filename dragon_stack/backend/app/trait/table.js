@@ -4,7 +4,7 @@ class TraitTable {
 	static getTraitId({ traitType, traitValue }) {
 		return new Promise((resolve, reject) => {
 			pool.query(
-				`select id from trait where traitType = $1 and traitValue = $2`,
+				`select id from trait where "traitType" = $1 and "traitValue" = $2`,
 				[traitType, traitValue],
 				(err, res) => {
 					if (err) return reject(err);

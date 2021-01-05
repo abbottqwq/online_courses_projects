@@ -7,7 +7,7 @@ class DragonTraitTable {
             TraitTable.getTraitId({traitType, traitValue})
                 .then(({traitId})=>{
                     pool.query(
-                        `insert into dragonTrait(traitId, dragonId) values ($1, $2)`,
+                        `insert into dragonTrait("traitId", "dragonId") values ($1, $2)`,
                         [traitId,dragonId],
                         (err, res) => {
                             if(err) return reject(err);

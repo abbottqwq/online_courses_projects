@@ -21,7 +21,8 @@ const DEFAULT_PROPERTIES = {
 };
 
 class Dragon {
-	constructor({ birthday, nickname, traits, generationId } = {}) {
+	constructor({ dragonId, birthday, nickname, traits, generationId } = {}) {
+		this.dragonId = dragonId || DEFAULT_PROPERTIES.dragonId;
 		this.birthday = birthday || DEFAULT_PROPERTIES.birthday;
 		this.nickname = nickname || DEFAULT_PROPERTIES.nickname;
 		this.traits = traits || DEFAULT_PROPERTIES.randomTraits;
