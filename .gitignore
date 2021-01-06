@@ -1,1 +1,4 @@
 /dragon_stack/backend/node_modules/
+/dragon_stack/frontend/node_modules/
+/dragon_stack/frontend/.cache
+
