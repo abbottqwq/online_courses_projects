@@ -21,22 +21,14 @@ MINGW*) machine=MinGw ;;
 esac
 echo ${machine}
 
-# declare -a arr=("./bin/sql/generation.sql" "./bin/sql/dragon.sql" "./bin/sql/trait.sql")
-
-if [ ${machine}=="MinGw" ] || [ ${machine}=="Cygwin" ]; then
-	# psql.exe -U node_user dragonstackdb <./bin/sql/generation.sql
-	# psql.exe -U node_user dragonstackdb <./bin/sql/dragon.sql
-	# psql.exe -U node_user dragonstackdb <./bin/sql/trait.sql
+if [ ${machine} == "MinGw" ] || [ ${machine} == "Cygwin" ]; then
 	for i in "${arr[@]}"; do
 		echo "$i"
 		psql.exe -U node_user dragonstackdb <"$i"
 	done
-
-elif [ ${machine}=="Mac" ] || [ ${machine}=="Linux" ]; then
-	# psql -U node_user dragonstackdb <./bin/sql/generation.sql
-	# psql -U node_user dragonstackdb <./bin/sql/dragon.sql
-	# psql -U node_user dragonstackdb <./bin/sql/trait.sql
+elif [ ${machine} == "Mac" ] || [ ${machine} == "Linux" ]; then
 	for i in "${arr[@]}"; do
+		echo "$i"
 		psql -U node_user dragonstackdb <"$i"
 	done
 fi
