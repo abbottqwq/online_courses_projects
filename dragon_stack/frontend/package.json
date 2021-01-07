@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "clean": "rm -rf dist .cache",
-    "dev": "npm run start"
+    "dev": "npm run clean | npm run start"
   },
   "keywords": [],
   "author": "",
