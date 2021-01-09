@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "npm run clean | parcel src/index.html",
     "clean": "rm -rf dist .cache",
-    "dev": "npm run clean | npm run start"
+    "dev": "npm run start"
   },
   "keywords": [],
   "author": "",
